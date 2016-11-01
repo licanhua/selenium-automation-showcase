@@ -9,19 +9,19 @@ import java.util.List;
 /**
  * @author Canhua Li
  */
-public class SearchResultListContainer extends Container {
+public class SearchResults extends Container {
     @RelativeElement
     @FindBy(xpath=".//li[starts-with(@id, 'result_')]")
-    List<SearchItem> searchItemList;
+    List<ProductItem> productItemList;
 
     public void printAllItems(){
         StringBuilder sb = new StringBuilder();
-        sb.append("We found totally " + searchItemList.size() + " items\n");
+        sb.append("We found totally " + productItemList.size() + " items\n");
         int i= 1;
-        for (SearchItem searchItem: searchItemList) {
+        for (ProductItem productItem : productItemList) {
             sb.append(i++);
             sb.append(" ");
-            sb.append(searchItem.getItemDisplayString());
+            sb.append(productItem.getItemDisplayString());
             sb.append("\n");
         }
 

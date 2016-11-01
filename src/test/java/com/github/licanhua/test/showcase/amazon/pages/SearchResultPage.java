@@ -7,11 +7,14 @@ import org.openqa.selenium.support.FindBy;
  * @author Canhua Li
  */
 public class SearchResultPage extends Page {
+    @FindBy(id = "nav-search")
+    NavSearch navSearch;
+
     @FindBy(id="atfResults")
-    SearchResultListContainer searchResultListContainer;
+    SearchResults searchResults;
 
     public void printSearchResult() {
         System.out.println("Prepare to print all results");
-        searchResultListContainer.printAllItems();
+        searchResults.printAllItems();
     }
 }
