@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * @author Canhua Li
  */
-public class SearchItem extends Container {
+public class ProductItem extends Container {
     @RelativeElement
     @FindBy(xpath = "./div/div[3]/div[1]")
     WebElement itemDetail;
